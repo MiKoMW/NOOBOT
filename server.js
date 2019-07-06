@@ -13,6 +13,7 @@ app.listen(port);
 
 app.get('*', function(req, res) {
   res.send("hi");
+  console.log("Incoming message!")
 });
 
 console.log('Portal Node example RESTful API server started on: ' + port);
