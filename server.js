@@ -8,10 +8,10 @@ app.use(bodyParser.json());
 
 var routes = require('./api/routes/nodeapiRoutes'); //importing route
 routes(app); //register the route
+var host = "51.140.14.194";
 
-var server = app.listen(3000, function () {
+var server = app.listen(host,3000, function () {
 
-  var host = "51.140.14.194";
   var port = server.address().port;
 
   console.log("应用实例，访问地址为 http://%s:%s", host, port)
@@ -24,3 +24,5 @@ app.get('*', function(req, res) {
 });
 
 console.log('Portal Node example RESTful API server started on: ' + port);
+
+module.exports = app;
