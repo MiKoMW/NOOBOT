@@ -10,7 +10,7 @@ var routes = require('./api/routes/nodeapiRoutes'); //importing route
 routes(app); //register the route
 
 
-var server = app.listen(80, function () {
+var server = app.listen(port, function () {
 
   var host = server.address().address;
   var port = server.address().port;
